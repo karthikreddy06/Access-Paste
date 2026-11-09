@@ -1,0 +1,76 @@
+# Environment & Secret credentials
+.env
+*.env
+.env.*
+!.env.example
+*.local
+backend/.env
+ctrl-v-access/backend/.env
+
+# Virtual Environments
+.venv/
+venv/
+ENV/
+env/
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Python cache & compiled files
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+.pytest_cache/
+.coverage
+htmlcov/
+
+# Node & Frontend dependencies & builds
+node_modules/
+**/node_modules/
+frontend/node_modules/
+dist/
+**/dist/
+frontend/dist/
+.vite/
+**/.vite/
+frontend/.vite/
+.npm
+package-lock.json.bak
+
+# Legacy scratch folder
+ctrl-v-access/
+
+# Operating System files & logs
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# IDE & Editor settings
+.idea/
+.vscode/
+*.swp
+*.swo
+*~

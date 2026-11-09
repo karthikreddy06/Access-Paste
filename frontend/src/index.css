@@ -1,0 +1,129 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --text-scale: 1;
+  }
+  
+  html {
+    font-size: calc(16px * var(--text-scale));
+    scroll-behavior: smooth;
+  }
+
+  body {
+    transition: background-color 0.2s ease, color 0.2s ease;
+  }
+}
+
+/* Dyslexia-Friendly Mode */
+body.font-dyslexic,
+.font-dyslexic * {
+  font-family: 'Atkinson Hyperlegible', sans-serif !important;
+  letter-spacing: 0.03em !important;
+  word-spacing: 0.08em !important;
+  line-height: 1.65 !important;
+}
+
+/* High Contrast Mode */
+body.high-contrast {
+  background-color: #000000 !important;
+  color: #ffffff !important;
+}
+
+body.high-contrast .bg-slate-900,
+body.high-contrast .bg-slate-950,
+body.high-contrast .bg-slate-800\/50,
+body.high-contrast .bg-slate-800\/80,
+body.high-contrast .bg-slate-900\/90 {
+  background-color: #050505 !important;
+  border-color: #facc15 !important;
+}
+
+body.high-contrast .border-slate-800,
+body.high-contrast .border-slate-700 {
+  border-color: #facc15 !important;
+}
+
+body.high-contrast text,
+body.high-contrast .text-slate-400,
+body.high-contrast .text-slate-300,
+body.high-contrast .text-slate-500 {
+  color: #f3f4f6 !important;
+}
+
+body.high-contrast button,
+body.high-contrast input,
+body.high-contrast textarea {
+  border-width: 2px !important;
+}
+
+/* Keycap styling */
+.kbd-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  font-weight: 700;
+  padding: 0.15rem 0.45rem;
+  border-radius: 0.375rem;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 2px 0 rgba(0, 0, 0, 0.4);
+}
+
+/* Custom subtle scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+  height: 8px;
+}
+::-webkit-scrollbar-track {
+  background: rgba(15, 23, 42, 0.6);
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(56, 189, 248, 0.3);
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(56, 189, 248, 0.6);
+}
+
+/* Print Styles for Citizen Action Dossier */
+@media print {
+  header, footer, .no-print, button, select, input, textarea {
+    display: none !important;
+  }
+  
+  body {
+    background: #ffffff !important;
+    color: #000000 !important;
+    font-size: 12pt !important;
+  }
+
+  .print-only {
+    display: block !important;
+  }
+
+  .print-card {
+    border: 1px solid #d1d5db !important;
+    background: #ffffff !important;
+    color: #000000 !important;
+    box-shadow: none !important;
+    break-inside: avoid;
+    margin-bottom: 1rem;
+    padding: 1rem !important;
+  }
+
+  .print-card * {
+    color: #111827 !important;
+    border-color: #e5e7eb !important;
+  }
+}
+
+.print-only {
+  display: none;
+}
+
+
